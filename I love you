@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<p id="loveText">I Love You</p>
+
+<script>
+    function changeColor() {
+        var loveText = document.getElementById("loveText");
+        var colors = ["red", "blue", "green", "purple", "orange"];
+
+        setInterval(function () {
+            var randomColor = colors[Math.floor(Math.random() * colors.length)];
+            loveText.style.color = randomColor;
+        }, 1000); // Change color every 1000 milliseconds (1 second)
+    }
+
+    // Call the changeColor function when the page loads
+    window.onload = changeColor;
+</script>
+
+</body>
+</html>
